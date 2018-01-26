@@ -7,18 +7,20 @@ class Library extends Component {
      super(props);
      this.state = { albums: albumData };
    }
-   
+
   render() {
     return (
-      <section className='library'>
+      <section className='library album-covers container clearfix'>
       {
         this.state.albums.map( (album, index) =>
-          <Link to={`/album/${album.slug}`} key={index}>
-            <img src={album.albumCover} alt={album.title} />
-            <div>{album.title}</div>
-            <div>{album.artist}</div>
-            <div>{album.songs.length} songs</div>
-          </Link>
+          <div className="collection-album-container column">
+            <Link to={`/album/${album.slug}`} key={index}>
+              <img src={album.albumCover} alt={album.title} />
+              <div>{album.title}</div>
+              <div>{album.artist}</div>
+              <div>{album.songs.length} songs</div>
+            </Link>
+          </div>
         )
       }
       </section>

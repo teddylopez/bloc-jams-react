@@ -85,3 +85,22 @@ nav > a {
    color: rgb(233,50,117);
    font-size: 5rem;
 }
+
+/*
+#main_footer {
+  margin-top: 10rem;
+  padding: 2.5em 5%;
+  border-top: 1px solid #E9E9E9;
+  display: block;
+}
+
+#main_footer > .copyright {
+  float: left;
+  font-size: .9em;
+  margin: 0;
+}
+
+#main_footer > nav > a {
+  float: right;
+}
+*/

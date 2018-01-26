@@ -1,28 +1,87 @@
 .App {
   text-align: center;
+  font-family: 'Lato'
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+* {
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.clearfix::before,
+.clearfix::after {
+   content: " ";
+   display: table;
 }
 
-.App-title {
-  font-size: 1.5em;
+.clearfix::after {
+   clear: both;
 }
 
-.App-intro {
-  font-size: large;
+nav {
+  padding: 2.5rem 5%;
+  border-bottom: 1px solid #E9E9E9;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#logo {
+  font-weight: 700;
+  font-size: .85em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border: 2px solid #E9E9E9;
+  padding: 1rem;
+  text-decoration: none;
+  color: #424652;
+  float: left;
+  margin-top: 1rem;
+}
+
+nav > a {
+  float: right;
+  padding-right: 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Landing Page styles */
+
+.hero-title {
+  display: inline-block;
+  font-size: 9rem;
+  font-family: 'Permanent Marker', cursive;
+  text-transform: uppercase;
+}
+
+.hero-content {
+  position: relative;
+  min-height: 600px;
+  background:
+  linear-gradient(-45deg, rgba(0,0,0,0.3), rgba(0, 40, 105, 0.8));
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.point {
+  width: 33%;
+  float: left;
+  -webkit-transform: scaleX(0.9) translateY(3rem);
+  -moz-transform: scaleX(0.9) translateY(3rem);
+  transform: scaleX(0.9) translateY(3rem);
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.point > h2 {
+  font-size: 30px;
+}
+
+.ion-music-note,
+.ion-radio-waves,
+.ion-iphone {
+   color: rgb(233,50,117);
+   font-size: 5rem;
 }

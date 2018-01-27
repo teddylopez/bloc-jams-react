@@ -1,0 +1,32 @@
+/* Library Page styles */
+
+.album-covers {
+  position: relative;
+}
+
+.collection-album-container {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px 30px;
+}
+
+.collection-album-container .image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 74rem;
+}
+
+
+
+.column {
+  float: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-width: 40rem;
+  width: 25%;
+}

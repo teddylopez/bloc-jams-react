@@ -1,0 +1,79 @@
+/* Landing Page styles */
+
+.hero-content {
+  position: relative;
+  min-height: 600px;
+  background:
+  linear-gradient(-45deg, rgba(0,0,0,0.3), rgba(0, 40, 105, 0.8));
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.hero-content .hero-title {
+  padding-top: 7rem;
+  display: inline-block;
+  font-size: 6rem;
+  font-family: 'Permanent Marker', cursive;
+  text-transform: uppercase;
+}
+
+.arrow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  transition: opacity ease-in-out 0.5s;
+
+  left: 50%;
+  transform: translateX(-50%) rotateZ(45deg);
+  border-bottom-right-radius: 5px;
+  border-bottom: solid 7px;
+  border-right: solid 7px;
+  border-color: rgba(255,50,150,0.5);
+
+  animation-duration: 0.55s;
+  animation-name: float;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes float {
+  from {
+    top: -50px;
+  }
+  to {
+    top: -30px;
+  }
+}
+
+.selling-points {
+  margin-top: 5rem;
+  position: relative;
+}
+
+.point {
+  width: 33%;
+  float: left;
+  opacity: 0;
+  -webkit-transform: scaleX(0.9);
+     -moz-transform: scaleX(0.9);
+          transform: scaleX(0.9);
+  -webkit-transition: all 0.25s  ease-in-out;
+     -moz-transition: all 0.25s  ease-in-out;
+          transition: all 0.25s  ease-in-out;
+  -webkit-transition-delay: 0.2s;
+     -moz-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.point .point-title {
+  font-size: 1.25rem;
+}
+
+.ion-music-note,
+.ion-radio-waves,
+.ion-iphone {
+  color: rgb(233,50,117);
+  font-size: 5rem;
+}

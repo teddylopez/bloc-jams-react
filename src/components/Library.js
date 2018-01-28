@@ -13,24 +13,21 @@ class Library extends Component {
 
   render() {
     return (
-      <div className="collection clearfix">
-      <section className='album-covers container'>
+      <section className='library album-covers container'>
+      <div className="row">
       {
         this.state.albums.map( (album, index) =>
-
-            <div className="collection-album-container column fourth">
-              <div className="floats clearfix">
-                <Link to={`/album/${album.slug}`} key={index}>
-                  <img src={album.albumCover} alt={album.title} />
-                  <div>{album.title}</div>
-                  <div>{album.artist}</div>
-                </Link>
-              </div>
-            </div>
+          <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12 album">
+            <Link to={`/album/${album.slug}`} key={index}>
+              <img src={album.albumCover} alt={album.title} />
+              <div>{album.title}</div>
+              <div>{album.artist}</div>
+            </Link>
+          </div>
         )
-      }
-      </section>
+        }
       </div>
+      </section>
     );
   }
 }

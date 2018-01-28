@@ -1,11 +1,13 @@
 /* Library Page styles */
 
 
-.library {
-  margin-top: 2rem; /* not working */
+.album {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-a {
+.container a {
+  padding-top: 3rem;
   text-decoration: none;
 }
 
@@ -21,17 +23,12 @@ p {
   float: left;
 }
 
-.collection-album-container img {
+.container img {
   width: 100%;
 }
 
 .album-covers {
   position: relative;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 74rem;
 }
 
 .collection-album-container {

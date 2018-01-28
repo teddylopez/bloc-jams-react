@@ -6,6 +6,34 @@
   padding-bottom: 1rem;
 }
 
+.album-name {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.artist-name {
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+.album .label {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  padding: 20px 10px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+  background: rgba(0,0,0,0.5);
+  bottom: 85px;
+  opacity: 0;
+  transition: bottom ease-out 0.3s, opacity ease 0.5s;
+}
+
+.album:hover .label {
+  bottom: 30;
+  opacity: 1;
+}
+
 .container a {
   padding-top: 3rem;
   text-decoration: none;

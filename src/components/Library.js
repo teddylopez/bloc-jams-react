@@ -20,9 +20,11 @@ class Library extends Component {
           <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12 album">
             <Link to={`/album/${album.slug}`} key={index}>
               <img src={album.albumCover} alt={album.title} />
-              <div>{album.title}</div>
-              <div>{album.artist}</div>
+              <span className="album-name">{album.title}</span>
+              <br />
+              <span className="artist-name">{album.artist}</span>
             </Link>
+            <div className="label">{album.songs.length} songs</div>
           </div>
         )
         }

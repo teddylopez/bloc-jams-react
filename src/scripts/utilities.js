@@ -15,8 +15,6 @@ export function numberPad(number, digits = 0) {
   return string;
 }
 
-
-
 //
 export function getFirstParentByClassName (element, className) {
   if (!element) {console.log('No parent found');}

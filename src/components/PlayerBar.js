@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+//import './../styles/player_bar.css';
+import * as utils from './../scripts/utilities';
 class PlayerBar extends Component {
 
   formatTime(time) {

@@ -1,4 +1,17 @@
 
+.cover-art {
+  float: left;
+}
+
+.album-details {
+  float: left;
+  margin-left: 20%;
+  padding-top: 15%;
+}
+
+.song-table {
+  margin-top: 5rem;
+}
 
 .loading {
   position: absolute;

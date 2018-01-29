@@ -39,6 +39,10 @@
   text-decoration: none;
 }
 
+a:hover {
+  color: rgb(233,50,117);
+}
+
 p {
   display: block;
   -webkit-margin-before: 1em;

@@ -58,6 +58,7 @@ nav {
 }
 #logo:hover {
   color: rgb(233,50,117);
+  border: 2px solid #007bff;
 }
 
 nav > a {

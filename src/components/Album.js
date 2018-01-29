@@ -94,6 +94,16 @@ class Album extends Component {
      this.setState({ currentTime: newTime });
    }
 
+   volumeHandler = (event) => {
+    let newState = { 'volume': event.target.value };
+    this.player.setVolume(newState.volume);
+    this.setState(newState);
+  }
+
+  formatTime(time) {
+    return time? `${Math.floor(time / 60)}:${Number(time % 60 / 100).toFixed(2).substr(2,3)}` : '-:--'
+  }
+
   render() {
     return (
       <div className="container">
@@ -136,7 +146,7 @@ class Album extends Component {
                       <div className="bar bar4"></div>
                     </div>
                     </td>
-                  <td className="song-duration">{song.duration}</td>
+                  <td className="song-duration">{this.formatTime(song.duration)}</td>
                   <td className="song-duration">{song.playCount}</td>
                 </tr>
               )
@@ -149,10 +159,12 @@ class Album extends Component {
            currentSong={this.state.currentSong}
            currentTime={this.audioElement.currentTime}
            duration={this.audioElement.duration}
+           formatTime={(t) => this.formatTime(t)}
            handleSongClick={() => this.handleSongClick(this.state.currentSong)}
            handlePrevClick={() => this.handlePrevClick()}
            handleNextClick={() => this.handleNextClick()}
            handleTimeChange={(e) => this.handleTimeChange(e)}
+           volumeHandler={(e) => this.volumeHandler(e)}
          />
         </section>
       </div>

@@ -37,8 +37,3 @@ input[type="submit"], .button {
   padding: 1em 2em;
   cursor: pointer;
 }
-
-.button:hover {
-  color: rgb(233,50,117);
-  border: 2px solid #007bff;
-}

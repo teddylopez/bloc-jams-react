@@ -14,7 +14,7 @@ class Album extends Component {
 
      this.state = {
        album: album,
-       currentSong: album.songs[0],
+       currentSong: null,
        currentTime: 0,
        duration: album.songs[0].duration,
        isPlaying: false
@@ -55,6 +55,12 @@ class Album extends Component {
    pause() {
      this.audioElement.pause();
      this.setState({ isPlaying: false });
+   }
+
+   stopSong() {
+     this.audioElement.pause();
+     this.setState({ isPlaying: false });
+     this.setState({currentSong: null});
    }
 
    handleSongClick(song) {
@@ -126,7 +132,7 @@ class Album extends Component {
                 <td className="song-item-number">Track</td>
                 <td className="song-item-title">Track Title</td>
                 <td className="song-item-duration">Track Length</td>
-                <td className="song-item-play-count">Total Plays</td>
+
               </tr>
             </thead>
             <tbody>
@@ -147,7 +153,7 @@ class Album extends Component {
                     </div>
                     </td>
                   <td className="song-duration">{this.formatTime(song.duration)}</td>
-                  <td className="song-duration">{song.playCount}</td>
+
                 </tr>
               )
             }
@@ -158,11 +164,13 @@ class Album extends Component {
            isPlaying={this.state.isPlaying}
            currentSong={this.state.currentSong}
            currentTime={this.audioElement.currentTime}
+           artist={this.state.album.artist}
            duration={this.audioElement.duration}
            formatTime={(t) => this.formatTime(t)}
            handleSongClick={() => this.handleSongClick(this.state.currentSong)}
            handlePrevClick={() => this.handlePrevClick()}
            handleNextClick={() => this.handleNextClick()}
+           stopSong={() => this.stopSong()}
            handleTimeChange={(e) => this.handleTimeChange(e)}
            volumeHandler={(e) => this.volumeHandler(e)}
          />

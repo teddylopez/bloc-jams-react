@@ -3,119 +3,60 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 250px;
-  opacity: 50%;
-  padding: 1rem;
-  background-color: gray;
+  background: rgba(0, 0, 0, 0.65);
   z-index: 100;
+  transition: opacity 0.3s ease-out,
+              height 0.3s ease-out;
+  opacity: 0;
+  height: 0;
+}
+
+.player-bar.active {
+  height: 150px;
+  opacity: 1;
+}
+
+button {
+  padding-left: 8%;
+  padding-right: 8%;
+  font-size: 1.6rem;
+  color: #DDDDDD;
+}
+
+.seek-bar {
+  width: 100%;
 }
 
 .player-bar button:hover {
-  color: white;
+  color: #DDDDDD;
 }
 
-.player-bar .container {
-  display: table;
-  padding: 0;
-  width: 90%;
-  min-height: 100%;
-}
-
-.player-bar .container {
-  display: table;
-  padding: 0;
-  width: 90%;
-  min-height: 100%;
-}
-
-.player-bar .control-group {
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
-}
-
-.player-bar .main-controls {
-  width: 25%;
-  text-align: left;
-  padding-right: 1rem;
-}
-
-.player-bar .main-controls .button-group {
-  display: flex;
-  justify-content: center;
-}
-
-.player-bar .main-controls .previous {
-  margin-right: 16.5%;
-}
-
-.player-bar .main-controls .next {
-  margin-left: 16.5%;
-}
-
-.player-bar .main-controls .play-pause {
-  margin-right: 15%;
-  font-size: 1.6rem;
-  width: 1.6rem;
-}
-
-.player-bar .currently-playing {
-  width: 50%;
-  text-align: center;
-  position: relative;
-}
-
-.seek-control {
-  position: relative;
-  font-size: 0.8rem;
-}
-
-#seek-bar {
-  width: 100%;
-}
-
-.seek-control .current-time, .seek-control .total-time {
-    position: absolute;
-    top: 1rem;
-}
-
-.seek-control .total-time {
-  right: 0;
-}
-
-#volume {
-  width: 50%;
-  margin-left: 1rem;
-}
-
-.artist-name {
-  margin-bottom: 2rem;
-}
-
-.player-bar .control-group {
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
-}
-
-.player-bar .control-group.volume {
-    width: 100%;
-    text-align: center;
-}
-
-.player-bar .volume-number {
+.current-time {
   position: absolute;
-  top: 50%;
-  width: 100%;
-  margin-top: 5px;
-  text-align: center;
-  font-size: 0.8rem;
+  color: #DDDDDD;
+}
+.total-time {
+  text-align: right;
+  color: #DDDDDD;
 }
 
-.player-bar .volume .icon {
-  font-size: 1.1rem;
-  width: 1.1rem;
-  display: inline-block;
-  margin-left: 3px;
-  vertical-align: middle;
+button.close {
+  position: absolute;
+  right: 0;
+  padding: 15px;
+}
+
+.volume-icon {
+  padding-left: 1rem;
+  font-size: 30px;
+  color: #DDDDDD;
+}
+
+.player-bar .artist-name {
+  color: #DDDDDD;
+}
+
+.song-name {
+  padding-top: 10px;
+  color: #DDDDDD;
 }

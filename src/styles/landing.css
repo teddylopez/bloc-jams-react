@@ -1,5 +1,9 @@
 /* Landing Page styles */
 
+.landing {
+  margin-bottom: 10rem;
+}
+
 .hero-content {
   position: relative;
   min-height: 600px;

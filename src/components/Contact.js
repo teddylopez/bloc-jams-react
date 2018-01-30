@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './../styles/contact.css';
 
 class Contact extends Component {
+  
   render() {
     return (
         <div className="skinny_wrapper wrapper_padding">

@@ -137,9 +137,9 @@ class Album extends Component {
             <tbody>
             {
               this.state.album.songs.map(( song, index ) =>
-                <tr className={"album-view-song-item"}data-song-index={this.props.index}>
+                <tr className={"album-view-song-item"+((this.state.currentSong === song) ? ' selected' : "") + ((this.state.currentSong === index) ? ' playing' : "")} >
                   <td className="song-item-number" data-song-number={index+1}>
-                    <button className={"album-song-button clear-style"+(this.state.isPlaying ? " ion-stop" : " ion-play")} onClick={() => this.handleSongClick(song)}>
+                    <button className={"album-song-button clear-style"+((this.state.currentSong === song && this.state.isPlaying) ? " ion-stop" : " ion-play")} onClick={() => this.handleSongClick(song)}>
                     </button>
                   </td>
 
@@ -152,7 +152,6 @@ class Album extends Component {
                       <div className="bar bar4"></div>
                     </div>
                   </td>
-
                   <td className="song-duration">{this.formatTime(song.duration)}</td>
                 </tr>
               )

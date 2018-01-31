@@ -3,10 +3,7 @@ import './../styles/player_bar.css';
 import * as utils from './../scripts/utilities';
 
 class PlayerBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { volume: 5, position: 0 };
-  }
+
   formatTime(time) {
     const timeInSeconds = Math.floor(parseFloat(time))
     const minutes = Math.floor(timeInSeconds / 60)
@@ -53,8 +50,17 @@ class PlayerBar extends Component {
               </div>
 
               <div className="col-sm">
-                <input type="range" className="volume" value={this.state.volume} id="volume" min="0" max="10" onChange={this.volumeHandler} />
-                <span className={"icon volume-icon" + (this.state.volume < 1 ? " ion-volume-mute" : (this.state.volume < 3 ? " ion-volume-low" : (this.state.volume < 7 ? " ion-volume-medium" : " ion-volume-high")))}></span>
+                <input
+                  type="range"
+                  className="volume"
+                  value={this.props.currentVol}
+                  id="volume"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  onChange={this.props.handleVolumeChange}
+                />
+                <span className={"icon volume-icon" + (this.props.volume < 1 ? " ion-volume-mute" : (this.props.volume < 3 ? " ion-volume-low" : (this.props.volume < 7 ? " ion-volume-medium" : " ion-volume-high")))}></span>
                 <div className="volume-number">
 
                 </div>

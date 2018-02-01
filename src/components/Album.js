@@ -144,7 +144,7 @@ class Album extends Component {
             <tbody>
             {
               this.state.album.songs.map(( song, index ) =>
-                <tr className={"album-view-song-item"+((this.state.currentSong === song) ? ' selected' : "") + ((this.state.currentSong === index) ? ' playing' : "")} >
+                <tr className={"album-view-song-item"+((this.state.currentSong === song) ? ' selected' : "") + (this.state.isPlaying ? ' playing' : "")} >
                   <td className="song-item-number" data-song-number={index+1}>
                     <button className={"album-song-button clear-style"+((this.state.currentSong === song && this.state.isPlaying) ? " ion-stop" : " ion-play")} onClick={() => this.handleSongClick(song)}>
                     </button>

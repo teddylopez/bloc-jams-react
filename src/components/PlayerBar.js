@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './../styles/player_bar.css';
-import * as utils from './../scripts/utilities';
 
 class PlayerBar extends Component {
 
@@ -44,7 +43,7 @@ class PlayerBar extends Component {
                   />
                   <div className="current-time">{this.props.formatTime(this.props.currentTime)}</div>
                   <div className="total-time">{this.formatTime(this.props.duration)}</div>
-                  <h2 className="artist-song-mobile"></h2>
+                  <p className="artist-song-mobile"></p>
                   <p className="artist-name">{this.props.artist}</p>
                 </div>
               </div>

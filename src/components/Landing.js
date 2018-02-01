@@ -13,18 +13,18 @@ class Landing extends Component {
           <div className="arrow"><div className='left'></div><div className='right'></div></div>
           <div className="point column third">
             <span className="ion-music-note"></span>
-            <h5 className="point-title">Choose your music</h5>
-            <p className="point-description">The world is full of music; why should you have to listen to music that someone else chose?</p>
+            <h5 className="point-title">Only Ted</h5>
+            <p className="point-description">Why listen to anything else?</p>
           </div>
           <div className="point column third">
             <span className="ion-radio-waves"></span>
             <h5 className="point-title">Unlimited streaming, ad-free</h5>
-            <p className="point-description">No arbitrary limits. No distractions.</p>
+            <p className="point-description">Tune out the real world</p>
           </div>
           <div className="point column third">
             <span className="ion-iphone"></span>
             <h5 className="point-title">Mobile enabled</h5>
-            <p className="point-description">Listen to your music on the go. This streaming service is available on all mobile platforms.</p>
+            <p className="point-description">Text and drive: 240-271-7135</p>
           </div>
         </section>
         <script src="scripts/landing.js"></script>

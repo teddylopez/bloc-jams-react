@@ -12,7 +12,7 @@ class AppFooter extends Component {
     return (
       <footer style={style}>
         <p className="copyright">
-          &copy; 2018 Ted López  <a href="http://github.com/teddylopez" target="_blank"><span className="ion-social-octocat"></span></a>
+          &copy; 2018 Ted López  <a href="http://github.com/teddylopez" target="_blank" rel="noopener noreferrer"><span className="ion-social-octocat"></span></a>
         </p>
       </footer>
     );

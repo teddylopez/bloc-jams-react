@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
       <header>
-        <Link to='/' id="logo">TedTunes</Link>
+        <Link to='/' id="logo">tedness</Link>
           <nav className="clearfix">
           <Link to='/contact'>Contact</Link>
           <Link to='/about'>About</Link>

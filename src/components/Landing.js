@@ -7,7 +7,7 @@ class Landing extends Component {
     return (
       <div className="landing">
         <header className="hero-content">
-          <h1 className="hero-title">Turn the music up!</h1>
+          <h1 className="hero-title">Turn up the Ted!</h1>
         </header>
         <section className="selling-points container clearfix">
           <div className="arrow"><div className='left'></div><div className='right'></div></div>

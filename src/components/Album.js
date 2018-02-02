@@ -18,6 +18,7 @@ class Album extends Component {
       duration: album.songs[0].duration,
       isPlaying: false,
       currentVol: 0.5
+
     };
     this.audioElement = document.createElement('audio');
     this.audioElement.src = album.songs[0].audioSrc;
@@ -145,8 +146,11 @@ class Album extends Component {
             {
               this.state.album.songs.map(( song, index ) =>
                 <tr className={"album-view-song-item"+((this.state.currentSong === song) ? ' selected' : "") + (this.state.isPlaying ? ' playing' : "")} >
-                  <td className="song-item-number" data-song-number={index+1}>
-                    <button className={"album-song-button clear-style"+((this.state.currentSong === song && this.state.isPlaying) ? " ion-stop" : " ion-play")} onClick={() => this.handleSongClick(song)}>
+                  <td className="song-item-number">
+                    <button onClick={() => this.handleSongClick(song)}>
+                      <span className={"song-number"+ (this.state.isPlaying && (this.state.currentSong === song) ? ' hide' : ' show')}>{index+1}</span>
+                      <span className={"song-click ion-play" + (this.state.isPlaying && (this.state.currentSong === song) ? ' hide' : '')}></span>
+                      <span className={"song-click ion-pause" + (this.state.isPlaying && (this.state.currentSong === song) ? '' : ' hide')}></span>
                     </button>
                   </td>
 

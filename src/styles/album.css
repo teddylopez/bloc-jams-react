@@ -3,10 +3,6 @@
   float: left;
 }
 
-.album-view-song-item:hover .song-item-number .song-number {
-  display: none;
-}
-
 .hide {
   display: none;
 }
@@ -168,6 +164,10 @@ span.album-song-button:hover {
 }
 
 .playing.selected .sound-bars {
+  display: block;
+}
+
+.playing.selected .ion-play {
   display: block;
 }
 

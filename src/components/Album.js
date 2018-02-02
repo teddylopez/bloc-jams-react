@@ -17,12 +17,27 @@ class Album extends Component {
       currentTime: 0,
       duration: album.songs[0].duration,
       isPlaying: false,
-      currentVol: 0.5
-
+      currentVol: 0.5,
+      hover: false,
+      play: false
     };
+
     this.audioElement = document.createElement('audio');
     this.audioElement.src = album.songs[0].audioSrc;
     this.audioElement.volume = this.state.currentVol;
+  }
+
+  hoverOn() {
+    this.setState({ hover: true });
+  }
+
+  hoverOff(){
+    this.setState({ hover: false });
+  }
+
+  playPause() {
+    const play = this.state.play;
+    this.setState({ play: true });
   }
 
   componentDidMount() {
@@ -148,9 +163,10 @@ class Album extends Component {
                 <tr className={"album-view-song-item"+((this.state.currentSong === song) ? ' selected' : "") + (this.state.isPlaying ? ' playing' : "")} >
                   <td className="song-item-number">
                     <button onClick={() => this.handleSongClick(song)}>
-                      <span className={"song-number"+ (this.state.isPlaying && (this.state.currentSong === song) ? ' hide' : ' show')}>{index+1}</span>
-                      <span className={"song-click ion-play" + (this.state.isPlaying && (this.state.currentSong === song) ? ' hide' : '')}></span>
-                      <span className={"song-click ion-pause" + (this.state.isPlaying && (this.state.currentSong === song) ? '' : ' hide')}></span>
+                      <span className={"song-number"+ (this.state.hover ? " hide" : '' ) && (this.state.currentSong === song)} onMouseEnter={this.hoverOn}
+                        onMouseLeave={this.hoverOff} >{index+1}</span>
+                      <span className={"song-click"+ (this.state.currentSong === song && this.state.isPlaying ? ' ion-pause' : ' ion-play')}></span>
+
                     </button>
                   </td>
 

@@ -163,7 +163,7 @@ class Album extends Component {
                 <tr className={"album-view-song-item"+((this.state.currentSong === song) ? ' selected' : "") + (this.state.isPlaying ? ' playing' : "")} >
                   <td className="song-item-number">
                     <button onClick={() => this.handleSongClick(song)}>
-                      <span className={"song-number"+ (this.state.hover ? " hide" : '' ) && (this.state.currentSong === song)} onMouseEnter={this.hoverOn}
+                      <span className={"song-number"+ (this.state.hover ? " hide" : '' )} onMouseEnter={this.hoverOn}
                         onMouseLeave={this.hoverOff} >{index+1}</span>
                       <span className={"song-click"+ (this.state.currentSong === song && this.state.isPlaying ? ' ion-pause' : ' ion-play')}></span>
 

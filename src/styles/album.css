@@ -114,12 +114,17 @@
   background-color: rgba(0,0,0,0.2);
 }
 
+.album-view-song-item:hover .song-number {
+  display: none;
+}
+
+
 .album-view-song-list thead .song-item-number {
   width: 5%;
   min-width: 36px;
 }
 
-span.album-song-button {
+button.album-song-button {
   font-size: 16px;
   background-color: rgb(210, 40, 123);
   border: none;
@@ -131,9 +136,22 @@ span.album-song-button {
   padding: 1px 0 0 0;
 }
 
-span.album-song-button:hover {
+button.album-song-button:hover {
   background-color: rgb(210, 40, 123);
   color: white;
+}
+
+.album-view-song-item:hover .song-item-number .album-song-button.ion-play {
+  display: inline-block;
+}
+
+.album-view-song-item:hover .song-item-number .album-song-button.ion-pause {
+  display: inline-block;
+}
+
+
+.album-song-button  {
+  display: none;
 }
 
 .album-view-song-list thead .song-item-title {
@@ -164,10 +182,6 @@ span.album-song-button:hover {
 }
 
 .playing.selected .sound-bars {
-  display: block;
-}
-
-.playing.selected .ion-play {
   display: block;
 }
 

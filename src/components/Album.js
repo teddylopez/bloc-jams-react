@@ -19,7 +19,7 @@ class Album extends Component {
       isPlaying: false,
       currentVol: 0.5,
       hover: false,
-      play: false
+      play: false,
     };
 
     this.audioElement = document.createElement('audio');
@@ -160,13 +160,11 @@ class Album extends Component {
             <tbody>
             {
               this.state.album.songs.map(( song, index ) =>
-                <tr className={"album-view-song-item"+((this.state.currentSong === song) ? ' selected' : "") + (this.state.isPlaying ? ' playing' : "")} >
+                <tr className={"album-view-song-item"+((this.state.currentSong === song) ? ' selected' : "") + (this.state.isPlaying ? ' playing' : "")} onClick={() => this.handleSongClick(song)}>
                   <td className="song-item-number">
-                    <button onClick={() => this.handleSongClick(song)}>
-                      <span className={"song-number"+ (this.state.hover ? " hide" : '' )} onMouseEnter={this.hoverOn}
-                        onMouseLeave={this.hoverOff} >{index+1}</span>
-                      <span className={"song-click"+ (this.state.currentSong === song && this.state.isPlaying ? ' ion-pause' : ' ion-play')}></span>
-
+                    <button>
+                      <span className={"song-number"+ ((this.state.currentSong === song && (this.state.isPlaying || !this.state.isPlaying)) ? ' hide' : "")}>{index+1}</span>
+                      <span className={"album-song-button" + (!this.state.isPlaying || (this.state.isPlaying && this.state.currentSong !== song) ? ' ion-play show' : ' ion-pause show')}></span>
                     </button>
                   </td>
 

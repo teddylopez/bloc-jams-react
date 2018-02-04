@@ -162,9 +162,9 @@ class Album extends Component {
               this.state.album.songs.map(( song, index ) =>
                 <tr className={"album-view-song-item"+((this.state.currentSong === song) ? ' selected' : "") + (this.state.isPlaying ? ' playing' : "")} onClick={() => this.handleSongClick(song)}>
                   <td className="song-item-number">
-                    <button>
-                      <span className={"song-number"+ ((this.state.currentSong === song && (this.state.isPlaying || !this.state.isPlaying)) ? ' hide' : "")}>{index+1}</span>
-                      <span className={"album-song-button" + (!this.state.isPlaying || (this.state.isPlaying && this.state.currentSong !== song) ? ' ion-play show' : ' ion-pause show')}></span>
+                    <button className="album-btns">
+                      <span className={"song-number" + (this.state.currentSong === song && this.state.isPlaying ? " hide" : " show")}>{index+1}</span>
+                      <span className={"album-song-button" + (!this.state.isPlaying || (this.state.isPlaying && this.state.currentSong !== song) ? " ion-play hide" : " ion-pause")}></span>
                     </button>
                   </td>
 

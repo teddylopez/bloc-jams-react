@@ -111,21 +111,13 @@
   min-width: 36px;
 }
 
-button.album-song-button {
-  font-size: 16px;
-  background-color: rgb(210, 40, 123);
-  border: none;
-  color: white;
-  border-radius: 50% 50%;
-  display: none;
-  width: 28px;
-  height: 28px;
-  padding: 1px 0 0 0;
-}
-
-button.album-song-button:hover {
-  background-color: rgb(210, 40, 123);
-  color: white;
+button.album-btns {
+  padding-left: 8%;
+  padding-right: 8%;
+  color: #424652;
+  border: 2px solid #E9E9E9;
+  border-radius: 5px;
+  font-size: .7rem;
 }
 
 .hide {
@@ -134,10 +126,6 @@ button.album-song-button:hover {
 
 .show {
   display: inline-block;
-}
-
-.album-song-button  {
-  display: none;
 }
 
 .album-view-song-item:hover .song-number {

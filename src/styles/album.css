@@ -3,14 +3,6 @@
   float: left;
 }
 
-.hide {
-  display: none;
-}
-
-.show {
-  display: inline-block;
-}
-
 .album-details {
   float: left;
   margin-left: 20%;
@@ -114,11 +106,6 @@
   background-color: rgba(0,0,0,0.2);
 }
 
-.album-view-song-item:hover .song-number {
-  display: none;
-}
-
-
 .album-view-song-list thead .song-item-number {
   width: 5%;
   min-width: 36px;
@@ -141,17 +128,28 @@ button.album-song-button:hover {
   color: white;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline-block;
+}
+
+.album-song-button  {
+  display: none;
+}
+
+.album-view-song-item:hover .song-number {
+  display: none;
+}
+
 .album-view-song-item:hover .song-item-number .album-song-button.ion-play {
   display: inline-block;
 }
 
 .album-view-song-item:hover .song-item-number .album-song-button.ion-pause {
   display: inline-block;
-}
-
-
-.album-song-button  {
-  display: none;
 }
 
 .album-view-song-list thead .song-item-title {

@@ -100,6 +100,7 @@
   height: 3rem;
   border-bottom: 1px solid rgb(233, 233, 233);
   transition: background-color ease 0.15s;
+  cursor: pointer;
 }
 
 .album-view-song-item:hover {

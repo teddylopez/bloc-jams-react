@@ -35,7 +35,6 @@ class Album extends Component {
   }
 
   playPause() {
-    const play = this.state.play;
     this.setState({ play: true });
   }
 

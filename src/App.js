@@ -6,7 +6,6 @@ import Landing from './components/Landing';
 import About from './components/About';
 import Library from './components/Library';
 import Album from './components/Album';
-import Contact from './components/Contact';
 import AppFooter from './components/AppFooter'
 
 class App extends Component {
@@ -16,7 +15,6 @@ class App extends Component {
       <header>
         <Link to='/' id="logo">tedness</Link>
           <nav className="clearfix">
-          <Link to='/contact'>Contact</Link>
           <Link to='/about'>About</Link>
           <Link to='/library'>Library</Link>
           </nav>
@@ -24,7 +22,6 @@ class App extends Component {
         <main>
           <Route exact path="/" component={Landing} />
           <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
         </main>

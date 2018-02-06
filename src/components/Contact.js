@@ -5,7 +5,7 @@ class Contact extends Component {
 
   render() {
     return (
-        <div className="skinny_wrapper wrapper_padding">
+        <div>
           <div className="page-title">Complain to me</div>
           <form className="new_contact" id="new_contact">
             <label htmlFor="contact_name">Fake Name</label><br />

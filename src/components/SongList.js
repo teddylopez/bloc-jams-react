@@ -16,14 +16,14 @@ class SongList extends Component {
         <tbody>
           {this.props.songs.map((song, index) => (
             <SongItem key={index}
-                  songNumber={index+1}
-                  songIndex={index}
-                  title={song.title}
-                  duration={song.duration}
-                  playCount={song.playCount}
-                  selected={this.props.currentSong === song}
-                  playing={this.props.playing}
-                  />))}
+              songNumber={index+1}
+              songIndex={index}
+              title={song.title}
+              duration={song.duration}
+              playCount={song.playCount}
+              selected={this.props.currentSong === song}
+              playing={this.props.playing}
+              />))}
         </tbody>
       </table>
     );

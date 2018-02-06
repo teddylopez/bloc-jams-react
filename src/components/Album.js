@@ -179,24 +179,24 @@ class Album extends Component {
                 </tr>
               )
             }
-             </tbody>
-           </table>
-         </div>
-         <PlayerBar
-           isPlaying={this.state.isPlaying}
-           currentSong={this.state.currentSong}
-           currentTime={this.audioElement.currentTime}
-           artist={this.state.album.artist}
-           duration={this.audioElement.duration}
-           currentVol={this.audioElement.volume}
-           formatTime={(t) => this.formatTime(t)}
-           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
-           handlePrevClick={() => this.handlePrevClick()}
-           handleNextClick={() => this.handleNextClick()}
-           stopSong={() => this.stopSong()}
-           handleTimeChange={(e) => this.handleTimeChange(e)}
-           handleVolumeChange={(e) => this.handleVolumeChange(e)}
-         />
+            </tbody>
+          </table>
+        </div>
+        <PlayerBar
+          isPlaying={this.state.isPlaying}
+          currentSong={this.state.currentSong}
+          currentTime={this.audioElement.currentTime}
+          artist={this.state.album.artist}
+          duration={this.audioElement.duration}
+          currentVol={this.audioElement.volume}
+          formatTime={(t) => this.formatTime(t)}
+          handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+          handlePrevClick={() => this.handlePrevClick()}
+          handleNextClick={() => this.handleNextClick()}
+          stopSong={() => this.stopSong()}
+          handleTimeChange={(e) => this.handleTimeChange(e)}
+          handleVolumeChange={(e) => this.handleVolumeChange(e)}
+        />
         </section>
       </div>
     );

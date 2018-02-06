@@ -12,7 +12,7 @@ class About extends Component {
           </div>
           <div className="header">Complain To Me</div>
           <div className="segment-bottom">
-            <h3>Send me your hatemail <a href="mailto:tedmlopez@gmail.com?subject=Mail%20from%20TEDNESS">here</a>.</h3>
+            <h3>Send me your hatemail <a className="mail-to" href="mailto:tedmlopez@gmail.com?subject=Mail%20from%20TEDNESS">here</a>.</h3>
           </div>
         </div>
       </div>

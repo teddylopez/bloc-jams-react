@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class AppFooter extends Component {
   render(props) {
     const style = {
-      fontSize: '12px',
+      fontSize: '15px',
       marginTop: '10rem',
       padding: '2.5em 5%',
       borderTop: '1px solid #E9E9E9',

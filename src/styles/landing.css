@@ -17,9 +17,28 @@
 .hero-content .hero-title {
   padding-top: 7rem;
   display: inline-block;
-  font-size: 6rem;
+  font-size: 8rem;
   font-family: 'Permanent Marker', cursive;
   text-transform: uppercase;
+}
+
+@media(max-width:767px){
+  .hero-content .hero-title {
+    padding-top: 3.5rem;
+    font-size: 6rem;
+  }
+}
+@media(min-width:768px){
+  .hero-content .hero-title {
+    padding-top: 7rem;
+    font-size: 8rem;
+  }
+}
+@media(min-width:992px){
+  .hero-content .hero-title {
+    padding-top: 7rem;
+    font-size: 8rem;
+  }
 }
 
 .arrow {

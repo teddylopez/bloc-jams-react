@@ -134,8 +134,8 @@ class Album extends Component {
     return (
       <div className="container">
         <section className="album">
-          <section id="album-info" className="clearfix">
-            <div className="cover-art">
+          <section id="album-info" className="artist-info">
+            <div className="cover-art col-xs-12 col-sm-6 col-med-6 col-lg-6">
                <img id="album-cover-art" src={this.state.album.albumCover} alt="album-cover" />
             </div>
              <div className="album-details">

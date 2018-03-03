@@ -74,6 +74,12 @@
           transition-delay: 0.2s;
 }
 
+@media(max-width:767px){
+  .point-group {
+    flex-direction: column;
+  }
+}
+
 .point .point-title {
   font-size: 1.25rem;
 }
@@ -84,13 +90,3 @@
   color: rgb(233,50,117);
   font-size: 5rem;
 }
-
-
-@media(max-width:767px){
-  .point-group {
-    flex-direction: column;
-  }
-}
-@media(min-width:768px){}
-@media(min-width:992px){}
-@media(min-width:1200px){}

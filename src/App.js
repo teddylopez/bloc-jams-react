@@ -14,7 +14,7 @@ class App extends Component {
       <div className="App">
       <header>
         <Link to='/' id="logo">tedness</Link>
-          <nav className="clearfix">
+          <nav className="clearfix xs-hidden">
           <Link to='/about'>About</Link>
           <Link to='/library'>Library</Link>
           </nav>

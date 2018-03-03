@@ -56,9 +56,12 @@
   position: relative;
 }
 
+.point-group {
+  display: flex;
+}
+
 .point {
-  width: 33%;
-  float: left;
+  flex: 1;
   opacity: 0;
   -webkit-transform: scaleX(0.9);
      -moz-transform: scaleX(0.9);
@@ -81,3 +84,13 @@
   color: rgb(233,50,117);
   font-size: 5rem;
 }
+
+
+@media(max-width:767px){
+  .point-group {
+    flex-direction: column;
+  }
+}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}

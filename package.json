@@ -1,5 +1,6 @@
 {
-  "name": "bloc-jams-react",
+  "name": "tedness",
+  "homepage" : "https://tedness.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

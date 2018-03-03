@@ -25,6 +25,7 @@ body {
   font-family: 'Lato';
   display: flex;
   flex-direction: column;
+  line-height: 19px;
 }
 
 button {
